@@ -9,13 +9,13 @@ import starter.pageobject.Login;
 public class LoginStepDefinition extends PageObject {
 
   Login login;
-  @Given("HRMS is opened")
+  @Given("Opencart page is opened")
   public void hrmsIsOpened() {
     openUrl("https://demo.opencart.com/admin/");
     getDriver().manage().window().maximize();
   }
 
-  @When("login with usename {string} and password {string}")
+  @When("Login with usename {string} and password {string}")
   public void loginWithUsenameAndPassword(String username, String password) {
     login.doLogin(username, password);
   }
